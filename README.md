@@ -45,3 +45,27 @@ Inside the main function initialize the LCD using the object you created.
         }
         
         }
+        
+ ##  IMPLEMENTATION
+ To clear the lcd screen use the command
+ 
+        my_lcd.clear();
+        
+ To move to the next row of the lcd use.
+        
+        my_lcd.new_line();
+        
+ To write a single character to the lcd use the send character method
+        
+        my_lcd.send_character('C');
+        
+ To write a string to the LCD use and array of characters and pass it to the send_string method
+ 
+        char message[] = "Hello World";
+        my_lcd.send_string(message);
+        
+ To send an instruction/command to the LCD.
+         
+         //for example a clear screen instruction with binary code 0b00000001
+         my_lcd.send_instruction(0b00000001);
+          
